@@ -1,1 +1,20 @@
+[tool.poetry]
+name = "finartha-v2"
+version = "0.1.0"
+description = "Finance AI Assistant with Gemini Forecast"
+authors = "Team AE"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+streamlit = "*"
+pandas = "*"
+numpy = "*"
 matplotlib = ">=3.8"
+yfinance = ">=0.2.40"
+google-generativeai = ">=0.7.0"
+python-dateutil = "*"
+requests = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
