@@ -1,22 +1,25 @@
 # finartha-v3/pyproject.toml
-[project]
+[tool.poetry]
 name = "finartha-v3"
 version = "0.1.0"
 description = "Finance AI Assistant with Gemini Forecast"
+authors = ["Your Name <you@example.com>"]
 readme = "README.md"
-requires-python = ">=3.11"
-dependencies = [
-  "streamlit",
-  "pandas",
-  "numpy",
-  "matplotlib>=3.8",
-  "yfinance>=0.2.40",
-  "google-generativeai>=0.7.0",
-  "python-dateutil",
-  "requests",
-]
+package-mode = false   # <-- IMPORTANT: we're deploying an app, not a library
+
+[tool.poetry.dependencies]
+python = "^3.11"        # or "^3.12" to match your Streamlit Cloud setting
+streamlit = "*"
+pandas = "*"
+numpy = "*"
+matplotlib = ">=3.8"
+yfinance = ">=0.2.40"
+google-generativeai = ">=0.7.0"
+python-dateutil = "*"
+requests = "*"
 
 [build-system]
-requires = ["pdm-backend"]           # or "hatchling" if your builder supports it
-build-backend = "pdm.backend"
+requires = ["poetry-core>=1.8.0"]
+build-backend = "poetry.core.masonry.api"
+
 
