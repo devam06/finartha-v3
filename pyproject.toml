@@ -1,18 +1,25 @@
-[tool.poetry]
-name = "finartha-v3"
+# finartha-v3/pyproject.toml
+[project]
+name = "finartha_v3"                       # use underscore to avoid package-name quirks
 version = "0.1.0"
 description = "Finance AI Assistant with Gemini Forecast"
-authors = ["Your Name <you@example.com>"]
 readme = "README.md"
-packages = [{ include = "finartha_v3" }]  # <-- package folder
-
-[tool.poetry.dependencies]
-python = "^3.11"
-# ...same deps...
+requires-python = ">=3.11"
+dependencies = [
+  "streamlit",
+  "pandas",
+  "numpy",
+  "matplotlib>=3.8",
+  "yfinance>=0.2.40",
+  "google-generativeai>=0.7.0",
+  "python-dateutil",
+  "requests",
+]
 
 [build-system]
-requires = ["poetry-core>=1.8.0"]
-build-backend = "poetry.core.masonry.api"
+requires = ["pdm-backend>=2.4"]
+build-backend = "pdm.backend"
+
 
 
 
