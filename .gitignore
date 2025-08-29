@@ -1,0 +1,31 @@
+# --- Python build/cache ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+# --- Virtual envs ---
+.venv/
+venv/
+env/
+ENV/
+
+# --- Editors/OS junk ---
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# --- Streamlit ---
+# Keep config.toml; ignore secrets and ephemeral files
+.streamlit/secrets.toml
+.streamlit/state.json
+.streamlit/credentials.toml
+.streamlit/**/.cache*
+.streamlit/**/cache*/
+
+# --- Tests / tooling caches (optional) ---
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
