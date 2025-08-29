@@ -8,19 +8,22 @@ package-mode = false   # <-- IMPORTANT: app, not a library
 
 [tool.poetry.dependencies]
 python = "^3.11"        # or "^3.12" to match your app's Python setting
-streamlit = "*"
-pandas = "*"
-numpy = "*"
-matplotlib = ">=3.8"
-yfinance = ">=0.2.40"
-google-generativeai = ">=0.7.0"
-python-dateutil = "*"
-requests = "*"
+dependencies = [
+  "streamlit",
+  "pandas",
+  "numpy",
+  "matplotlib>=3.8",
+  "yfinance>=0.2.40",
+  "google-generativeai>=0.7.0",
+  "python-dateutil",
+  "requests",
+]
 
 [build-system]
 requires = ["poetry-core>=1.8.0"]
 build-backend = "poetry.core.masonry.api"
 
+# finartha-v3/pyproject.toml
 
 
 
